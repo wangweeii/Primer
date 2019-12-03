@@ -3,4 +3,4 @@ project(Primer)
 set(CMAKE_CXX_STANDARD 14)
 
 #add_executable(Primer 1/add_item.cc 1/Sales_item.h)
-add_executable(Primer 1/main.cc)
+add_executable(Primer main.cc)
