@@ -25,7 +25,7 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include "Version_test.h"
 
@@ -41,18 +41,19 @@ using std::regex_error;
 
 int main()
 {
-	try {
-		// missing close bracket after alnum; the constructor will throw 
-		regex r("[[:alnum:]+\\.(cpp|cxx|cc)$", regex::icase); 
-	} catch (regex_error e) 
-	     { cout << e.what() << "\ncode: " << e.code() << endl; }
+        try {
+                // missing close bracket after alnum; the constructor will throw
+                regex r("[[:alnum:]+\\.(cpp|cxx|cc)$", regex::icase);
+        } catch (regex_error e)
+             { cout << e.what() << "\ncode: " << e.code() << endl; }
 
-	return 0;
+        return 0;
 }
 #else
 
 // do nothing
-int main() { return 0; }
+int main()
+{ return 0; }
 
 #endif
 

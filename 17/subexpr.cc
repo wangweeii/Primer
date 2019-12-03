@@ -25,7 +25,7 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include "Version_test.h"
 
@@ -44,26 +44,27 @@ using std::regex_error;
 
 int main()
 {
-	try {
-		// r has two subexpressions: 
-		// the first is the part of the file name before the period
-		// the second is the file extension
-		regex r("([[:alnum:]]+)\\.(cpp|cxx|cc)$", regex::icase);
-		smatch results;
-		string filename;
-		while (cin >> filename) 
-			if (regex_search(filename, results, r))
-				cout << results.str(1) << endl;  
-				// print the first subexpression
-	} catch (regex_error e) 
-		{ cout << e.what() << " " << e.code() << endl; }
+        try {
+                // r has two subexpressions:
+                // the first is the part of the file name before the period
+                // the second is the file extension
+                regex r("([[:alnum:]]+)\\.(cpp|cxx|cc)$", regex::icase);
+                smatch results;
+                string filename;
+                while (cin >> filename)
+                        if (regex_search(filename, results, r))
+                                cout << results.str(1) << endl;
+                                // print the first subexpression
+        } catch (regex_error e)
+                { cout << e.what() << " " << e.code() << endl; }
 
-	return 0;
+        return 0;
 }
 #else
 
 // do nothing
-int main() { return 0; }
+int main()
+{ return 0; }
 
 #endif
 

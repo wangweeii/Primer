@@ -25,17 +25,18 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include <iostream>
+
 using std::cout; using std::endl;
 
-int main() 
+int main()
 {
-	short short_value = 32767; // max value if shorts are 16 bits
+        short short_value = 32767; // max value if shorts are 16 bits
 
-	short_value += 1; // this calculation overflows
-	cout << "short_value: " << short_value << endl;
+        short_value += 1; // this calculation overflows
+        cout << "short_value: " << short_value << endl;
 
-    return 0;
+        return 0;
 }

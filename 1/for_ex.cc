@@ -25,14 +25,17 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include <iostream>
+
 int main()
 {
-	int sum = 0;
-	for (int i = -100; i <= 100; ++i)
-    	sum += i;
-	std::cout << sum << std::endl;
-	return 0;
+        int      sum = 0;
+        for (int i   = -100; i <= 100; ++i)
+        {
+                sum += i;
+        }
+        std::cout << sum << std::endl;
+        return 0;
 }

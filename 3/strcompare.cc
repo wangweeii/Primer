@@ -25,23 +25,28 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include <string>
+
 using std::string;
 
 #include <iostream>
+
 using std::cout; using std::endl;
 
 int main()
 {
-    string str = "Hello";
-    string phrase = "Hello World";
-    string slang  = "Hiya";
+        string str    = "Hello";
+        string phrase = "Hello World";
+        string slang  = "Hiya";
 
-    if (str < phrase) cout << "str is smaller" << endl;
-    if (slang > str) cout << "slang is greater" << endl;
-    if (slang > phrase) cout << "slang is greater" << endl;
+        if (str < phrase)
+        { cout << "str is smaller" << endl; }
+        if (slang > str)
+        { cout << "slang is greater" << endl; }
+        if (slang > phrase)
+        { cout << "slang is greater" << endl; }
 
-    return 0;
+        return 0;
 }

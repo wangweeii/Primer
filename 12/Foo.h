@@ -25,7 +25,7 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #ifndef FOO_H
 #define FOO_H
@@ -33,16 +33,19 @@
 #include <iostream>
 
 typedef int T;
-struct Foo {  // members are public by default
-	Foo(T t): val(t) { }
-	T val;
+
+struct Foo
+{  // members are public by default
+        Foo(T t) : val(t)
+        {}
+
+        T val;
 };
 
-std::ostream&
-print(std::ostream &os, const Foo &f) 
+std::ostream &print(std::ostream &os, const Foo &f)
 {
-	os << f.val;
-	return os;
+        os << f.val;
+        return os;
 }
 
 #endif

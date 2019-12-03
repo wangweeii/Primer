@@ -25,9 +25,10 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include "Debug.h"
+
 // only implementation for the Debug classes are definitions
 // for static members named enable 
 constexpr Debug HW_Subsystem::enable;

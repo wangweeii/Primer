@@ -25,28 +25,29 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include "Animal_virtual_baseVers.h"
 #include <iostream>
+
 using std::cout; using std::endl; using std::ostream;
 
-void dance(const Bear&) 
-	{ cout << "dance(const Bear&)" << endl; }
+void dance(const Bear &)
+{ cout << "dance(const Bear&)" << endl; }
 
-void rummage(const Raccoon&) 
-	{ cout << "rummage(const Raccoon&)" << endl; }
+void rummage(const Raccoon &)
+{ cout << "rummage(const Raccoon&)" << endl; }
 
-ostream& operator<<(ostream&, const ZooAnimal&) 
-	{ return cout << "ZooAnimal output operator" << endl; }
+ostream &operator<<(ostream &, const ZooAnimal &)
+{ return cout << "ZooAnimal output operator" << endl; }
 
-int main ()
+int main()
 {
-	Panda ying_yang;
-	dance(ying_yang);   // ok: passes Panda object as a Bear 
-	rummage(ying_yang); // ok: passes Panda object as a Raccoon 
+        Panda ying_yang;
+        dance(ying_yang);   // ok: passes Panda object as a Bear
+        rummage(ying_yang); // ok: passes Panda object as a Raccoon
 
-	cout << ying_yang;  // ok: passes Panda object as a ZooAnimal
+        cout << ying_yang;  // ok: passes Panda object as a ZooAnimal
 
-	return 0;
+        return 0;
 }

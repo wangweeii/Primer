@@ -25,30 +25,34 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include "compare.h"
 #include "Blob.h"
 
 #include <string>
+
 using std::string;
 
 // Application.cc
 // these template types must be instantiated elsewhere in the program
 // instantion declaration and definition
-extern template class Blob<string>;  
-extern template int compare(const int&, const int&);
+extern template
+class Blob<string>;
 
-int main() {
+extern template int compare(const int &, const int &);
 
-	Blob<string> sa1, sa2; // instantiation will appear elsewhere
+int main()
+{
 
-	// Blob<int> and its initializer_list constructor 
-	// are instantiated in this file
-	Blob<int> a1 = {0,1,2,3,4,5,6,7,8,9}; 
-	Blob<int> a2(a1);  // copy constructor instantiated in this file
+        Blob<string> sa1, sa2; // instantiation will appear elsewhere
 
-	int i = compare(a1[0], a2[0]); // instantiation will appear elsewhere
+        // Blob<int> and its initializer_list constructor
+        // are instantiated in this file
+        Blob<int> a1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        Blob<int> a2(a1);  // copy constructor instantiated in this file
 
-	return 0;
+        int i = compare(a1[0], a2[0]); // instantiation will appear elsewhere
+
+        return 0;
 }

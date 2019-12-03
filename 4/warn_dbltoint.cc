@@ -25,16 +25,17 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include <iostream>
+
 using std::cout; using std::endl;
 
 int main()
 {
-	// the compiler might warn about loss of precision
-	int ival = 3.541 + 3; // the compiler might warn about loss of precision
-	cout << ival << endl;  // prints 6
+        // the compiler might warn about loss of precision
+        int ival = 3.541 + 3; // the compiler might warn about loss of precision
+        cout << ival << endl;  // prints 6
 
-	return 0;
+        return 0;
 }

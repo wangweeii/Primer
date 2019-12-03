@@ -6,6 +6,6 @@
 
 int main(int argc, char *argv[])
 {
-        std::cout<<"shit";
+        std::cout << "shit";
         return 0;
 }

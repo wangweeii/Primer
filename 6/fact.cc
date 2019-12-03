@@ -25,9 +25,10 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include <iostream>
+
 using std::cout; using std::endl;
 
 // declarations of our factorial functions
@@ -36,11 +37,11 @@ using std::cout; using std::endl;
 
 int main()
 {
-	cout << factorial(5) << endl;
-	cout << fact(5) << endl;
-	cout << factorial(0) << endl;
-	cout << fact(0) << endl;
+        cout << factorial(5) << endl;
+        cout << fact(5) << endl;
+        cout << factorial(0) << endl;
+        cout << fact(0) << endl;
 
-	return 0;
+        return 0;
 }
 

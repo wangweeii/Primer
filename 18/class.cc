@@ -25,20 +25,20 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
- */ 
+ */
 
 #include <iostream>
 #include <string>
 
 int main()
 {
-    std::string s;
+        std::string s;
 
-    // ok: calls std::getline(std::istream&, const std::string&)
-    getline(std::cin, s);
+        // ok: calls std::getline(std::istream&, const std::string&)
+        getline(std::cin, s);
 
-	std::cout << s << std::endl;
+        std::cout << s << std::endl;
 
-    return 0;
+        return 0;
 }
 

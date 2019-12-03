@@ -25,35 +25,44 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include <algorithm>
+
 using std::sort;
 
 #include <vector>
-using std::vector; 
+
+using std::vector;
 
 #include <iostream>
+
 using std::cout; using std::cin; using std::endl;
 
 #include "Sales_item.h"
 
-int main() 
+int main()
 {
-    Sales_item trans;
-    vector<Sales_item> file;
+        Sales_item         trans;
+        vector<Sales_item> file;
 
-    while (std::cin >> trans)  // read the transations
-        file.push_back(trans);
+        while (std::cin >> trans)
+        {  // read the transations
+                file.push_back(trans);
+        }
 
-	for (auto i : file)        // print what was read
-		cout << i << endl;
-	cout << "\n\n";
+        for (auto i : file)
+        {        // print what was read
+                cout << i << endl;
+        }
+        cout << "\n\n";
 
-	sort(file.begin(), file.end(), compareIsbn); // sort into ISBN order
-	for (auto i : file)        // print in ISBN order
-		cout << i << endl;
+        sort(file.begin(), file.end(), compareIsbn); // sort into ISBN order
+        for (auto i : file)
+        {        // print in ISBN order
+                cout << i << endl;
+        }
 
-	return 0;
+        return 0;
 }
 

@@ -25,35 +25,38 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include "Animal.h"
 #include <iostream>
+
 using std::ostream; using std::cout; using std::endl;
 
 // operations that take references to base classes of type Panda
-void print(const Bear&) 
+void print(const Bear &)
 {
-	cout << "print(const Bear&)" << std::endl;
+        cout << "print(const Bear&)" << std::endl;
 
 }
-void highlight(const Endangered&)
+
+void highlight(const Endangered &)
 {
-	cout << "highlight(const Endangered&)" << std::endl;
+        cout << "highlight(const Endangered&)" << std::endl;
 }
 
-ostream& operator<<(ostream &os, const ZooAnimal&)
+ostream &operator<<(ostream &os, const ZooAnimal &)
 {
-	return os << "ZooAnimal output operator" << endl;
+        return os << "ZooAnimal output operator" << endl;
 }
 
-int main() {
-	Panda ying_yang("ying_yang");
-	
-	print(ying_yang);     // passes Panda to a reference to Bear
-	highlight(ying_yang); // passes Panda to a reference to Endangered
-	cout << ying_yang << endl; // passes Panda to a reference to ZooAnimal
-	Panda ling_ling = ying_yang;    // uses the copy constructor 
+int main()
+{
+        Panda ying_yang("ying_yang");
 
-	return 0;
+        print(ying_yang);     // passes Panda to a reference to Bear
+        highlight(ying_yang); // passes Panda to a reference to Endangered
+        cout << ying_yang << endl; // passes Panda to a reference to ZooAnimal
+        Panda ling_ling = ying_yang;    // uses the copy constructor
+
+        return 0;
 }

@@ -25,7 +25,7 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include <iostream>
 
@@ -36,18 +36,18 @@ int reused = 42;  // reused has global scope
 
 int main()
 {
-	int unique = 0; // unique has block scope
+        int unique = 0; // unique has block scope
 
-	// output #1: uses global reused; prints 42 0
-	std::cout << reused << " " << unique << std::endl;   
+        // output #1: uses global reused; prints 42 0
+        std::cout << reused << " " << unique << std::endl;
 
-	int reused = 0; // new, local object named reused hides global reused
+        int reused = 0; // new, local object named reused hides global reused
 
-	// output #2: uses local reused; prints 0 0
-	std::cout << reused << " " <<  unique << std::endl;  
+        // output #2: uses local reused; prints 0 0
+        std::cout << reused << " " << unique << std::endl;
 
-	// output #3: explicitly requests the global reused; prints 42 0
-	std::cout << ::reused << " " <<  unique << std::endl;  
+        // output #3: explicitly requests the global reused; prints 42 0
+        std::cout << ::reused << " " << unique << std::endl;
 
-	return 0;
+        return 0;
 }

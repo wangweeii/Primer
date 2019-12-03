@@ -25,18 +25,20 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
-#include <iostream> 
+#include <iostream>
 
-int main() 
+int main()
 {
-	int sum = 0, value = 0;
+        int sum = 0, value = 0;
 
-	// read until end-of-file, calculating a running total of all values read
-	while (std::cin >> value) 
-		sum += value; // equivalent to sum = sum + value
+        // read until end-of-file, calculating a running total of all values read
+        while (std::cin >> value)
+        {
+                sum += value;
+        } // equivalent to sum = sum + value
 
-	std::cout << "Sum is: " << sum << std::endl;
-	return 0;
+        std::cout << "Sum is: " << sum << std::endl;
+        return 0;
 }

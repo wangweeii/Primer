@@ -25,28 +25,31 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include <string>
+
 using std::string;
 
 #include <iostream>
 
-namespace libs_R_us {
-    extern void print(int) 
-		{ std::cout << "libs_R_us::print(int)" << std::endl; }
-    extern void print(double) 
-		{ std::cout << "libs_R_us::print(double)" << std::endl; }
+namespace libs_R_us
+{
+        extern void print(int)
+        { std::cout << "libs_R_us::print(int)" << std::endl; }
+
+        extern void print(double)
+        { std::cout << "libs_R_us::print(double)" << std::endl; }
 }
 
 // ordinary declaration
 void print(const std::string &)
 {
-	std::cout << "print(const std::string &)" << std::endl;
+        std::cout << "print(const std::string &)" << std::endl;
 }
 
 // this using directive adds names to the candidate set for calls to print:
-using namespace libs_R_us;  
+using namespace libs_R_us;
 
 // the candidates for calls to print at this point in the program are:
 //     print(int) from libs_R_us
@@ -55,10 +58,10 @@ using namespace libs_R_us;
 
 int main()
 {
-	int ival = 42;
-    print("Value: "); // calls global print(const string &)
-    print(ival);      // calls libs_R_us::print(int)
+        int ival = 42;
+        print("Value: "); // calls global print(const string &)
+        print(ival);      // calls libs_R_us::print(int)
 
-	return 0;
+        return 0;
 }
 

@@ -25,17 +25,17 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/
 
 #include <iostream>
 #include "Sales_item.h"
 
-int main() 
+int main()
 {
-    Sales_item item1, item2;
+        Sales_item item1, item2;
 
-    std::cin >> item1 >> item2;   //read a pair of transactions
-    std::cout << item1 + item2 << std::endl; //print their sum
+        std::cin >> item1 >> item2;   //read a pair of transactions
+        std::cout << item1 + item2 << std::endl; //print their sum
 
-    return 0;
+        return 0;
 }
